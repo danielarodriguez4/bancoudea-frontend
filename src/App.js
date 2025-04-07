@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import CustomerList from './components/CustomerList';
+import CustomerDetail from './components/CustomerDetail';
+import AddCustomerForm from './components/AddCustomerForm';
+import TransferForm from './components/TransferForm';
+import TransactionList from './components/TransactionList';
 
 function App() {
+  const [selectedCustomerId, setSelectedCustomerId] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: 20 }}>
+      <h1>Banco React</h1>
+      <AddCustomerForm />
+      <TransferForm />
+      <TransactionList />
+      <CustomerList onSelect={setSelectedCustomerId} />
+      <CustomerDetail id={selectedCustomerId} />
     </div>
   );
 }
