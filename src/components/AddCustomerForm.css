@@ -5,7 +5,7 @@
   .add-customer-form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    width: 400px;
   }
   
   .customer-input {
@@ -13,16 +13,18 @@
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 400px;
   }
   
   .submit-btn {
     margin-top: 10px;
-    padding: 6px 12px;
+    padding: 6px 10px;
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
+    width: 420px;
   }
   
   .submit-btn:hover {

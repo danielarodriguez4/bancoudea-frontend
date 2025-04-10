@@ -16,7 +16,6 @@ const CustomerDetail = ({ id }) => {
   return (
     <div className="add-customer-container">
       <form className="add-customer-form">
-        <h3>Detalle del cliente</h3>
         <h4>Nombre del cliente</h4>
         <input
           className="customer-input"

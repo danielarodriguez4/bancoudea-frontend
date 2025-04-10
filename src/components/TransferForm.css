@@ -10,6 +10,7 @@
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%;
   }
   
   .transfer-btn {
@@ -20,6 +21,7 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    width: 419px;
   }
   
   .transfer-btn:hover {

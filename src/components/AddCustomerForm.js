@@ -32,7 +32,7 @@ const AddCustomerForm = () => {
   return (
     <div className="add-customer-container">
       <form className="add-customer-form" onSubmit={handleSubmit}>
-        <h3>Crear Cliente</h3>
+        <h3>Crear cliente</h3>
         <input
           className="customer-input"
           name="firstName"
