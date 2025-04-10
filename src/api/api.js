@@ -9,8 +9,8 @@ export const getCustomerById = (id) => axios.get(`${API_BASE}/customers/${id}`);
 export const createCustomer = (customer) =>
   axios.post(`${API_BASE}/customers`, customer);
 
-export const transferMoney = (data) =>
-  axios.post(`${API_BASE}/transactions/transfer`, data);
-
 export const getTransactions = (accountNumber) =>
   axios.get(`${API_BASE}/transactions/${accountNumber}`);
+
+export const transferMoney = (data) =>
+  axios.post(`${API_BASE}/transactions/transfer`, data);

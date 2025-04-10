@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import CustomerList from './components/CustomerList';
 import CustomerDetail from './components/CustomerDetail';
 import AddCustomerForm from './components/AddCustomerForm';
 import TransferForm from './components/TransferForm';
 import TransactionList from './components/TransactionList';
+import CustomerManager from './components/CustomerManager';
 
 function App() {
-  const [selectedCustomerId, setSelectedCustomerId] = useState(null);
+  const [selectedCustomerId] = useState(null);
 
   return (
     <div style={{ padding: 20 }}>
-      <h1>Banco React</h1>
+      <h1>Banco UdeA</h1>
       <AddCustomerForm />
       <TransferForm />
       <TransactionList />
-      <CustomerList onSelect={setSelectedCustomerId} />
+      
       <CustomerDetail id={selectedCustomerId} />
+      <CustomerManager />
     </div>
   );
 }

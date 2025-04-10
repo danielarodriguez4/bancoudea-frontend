@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getCustomerById } from '../api/api';
+import './AddCustomerForm.css'; 
 
 const CustomerDetail = ({ id }) => {
   const [customer, setCustomer] = useState(null);
@@ -10,14 +11,31 @@ const CustomerDetail = ({ id }) => {
     }
   }, [id]);
 
-  if (!customer) return <p>Selecciona un cliente</p>;
+  if (!customer) return null;
 
   return (
-    <div>
-      <h3>Detalle del Cliente</h3>
-      <p><strong>Nombre:</strong> {customer.firstName} {customer.lastName}</p>
-      <p><strong>Número de cuenta:</strong> {customer.accountNumber}</p>
-      <p><strong>Saldo:</strong> {customer.balance}</p>
+    <div className="add-customer-container">
+      <form className="add-customer-form">
+        <h3>Detalle del cliente</h3>
+        <h4>Nombre del cliente</h4>
+        <input
+          className="customer-input"
+          value={`${customer.firstName} ${customer.lastName}`}
+          readOnly
+        />
+        <h4>Número de cuenta</h4>
+        <input
+          className="customer-input"
+          value={customer.accountNumber}
+          readOnly
+        />
+        <h4>Saldo</h4>
+        <input
+          className="customer-input"
+          value={`$${customer.balance}`}
+          readOnly
+        />
+      </form>
     </div>
   );
 };
